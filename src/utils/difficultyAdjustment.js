@@ -175,7 +175,7 @@ export function recommendDifficulty(analysis, exerciseType, currentDifficulty = 
  * @returns {Object} Modified exercise data
  */
 export function adjustExerciseDifficulty(exercise, difficulty) {
-  const adjustedExercise = { ...exercise }
+  let adjustedExercise = { ...exercise }
 
   switch (difficulty) {
     case DIFFICULTY_LEVELS.VERY_EASY:
