@@ -1,63 +1,64 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import FillInTheBlankExercise from '../components/exercises/FillInTheBlankExercise'
+import DragDropExercise from '../components/exercises/DragDropExercise'
+import ListeningExercise from '../components/exercises/ListeningExercise'
+import TypingExercise from '../components/exercises/TypingExercise'
+import lessonsData from '../data/lessons.json'
 
 const LessonDetail = () => {
   const { lessonId } = useParams()
+  const [lesson, setLesson] = useState(null)
+  const [activeExercise, setActiveExercise] = useState(null)
+  const [exerciseProgress, setExerciseProgress] = useState({})
 
-  // Placeholder lesson data - will be replaced with actual data loading in Phase 1
-  const lesson = {
-    id: lessonId,
-    title: 'Introduction to Hangul',
-    level: 'beginner',
-    category: 'pronunciation',
-    description: 'Learn the basics of the Korean alphabet.',
-    prerequisites: [],
-    nextLessons: ['lesson-002'],
-    content: {
-      text: `Hangul is the Korean alphabet, created by King Sejong in 1443. It is considered one of the most scientific writing systems in the world.
+  useEffect(() => {
+    // Load lesson data from JSON
+    const foundLesson = lessonsData.lessons.find(l => l.id === lessonId)
+    if (foundLesson) {
+      setLesson(foundLesson)
+    }
+  }, [lessonId])
 
-The Korean alphabet consists of 14 basic consonants and 10 basic vowels. These letters are combined to form syllable blocks, which make up Korean words.
-
-In this lesson, we'll introduce you to the basic structure of Hangul and show you how Korean characters are formed.`,
-      examples: [
-        {
-          korean: 'ㄱ',
-          romanization: 'g/k',
-          translation: 'Consonant G/K',
-          audio: '/assets/audio/g.mp3'
-        },
-        {
-          korean: 'ㄴ',
-          romanization: 'n',
-          translation: 'Consonant N',
-          audio: '/assets/audio/n.mp3'
-        },
-        {
-          korean: 'ㅏ',
-          romanization: 'a',
-          translation: 'Vowel A',
-          audio: '/assets/audio/a.mp3'
-        }
-      ],
-      media: {
-        image: '/assets/images/hangul-chart.jpg',
-        video: null
+  const handleExerciseComplete = (exerciseData) => {
+    console.log('Exercise completed:', exerciseData)
+    // Store completion data for gamification features
+    setExerciseProgress(prev => ({
+      ...prev,
+      [activeExercise.type]: {
+        ...exerciseData,
+        completedAt: new Date().toISOString()
       }
-    },
-    exercises: [
-      {
-        type: 'quiz',
-        title: 'Hangul Recognition Quiz'
-      },
-      {
-        type: 'flashcard',
-        title: 'Character Flashcards'
-      },
-      {
-        type: 'pronunciation',
-        title: 'Pronunciation Practice'
-      }
-    ]
+    }))
+  }
+
+  const handleExerciseProgress = (progressData) => {
+    console.log('Exercise progress:', progressData)
+    // Track progress for adaptive learning features
+  }
+
+  const startExercise = (exercise) => {
+    setActiveExercise(exercise)
+  }
+
+  const closeExercise = () => {
+    setActiveExercise(null)
+  }
+
+  if (!lesson) {
+    return (
+      <div className="page-container">
+        <div className="card">
+          <div style={{ padding: '2rem', textAlign: 'center' }}>
+            <h2>Lesson not found</h2>
+            <p>The requested lesson could not be found.</p>
+            <Link to="/lessons" className="btn btn-primary">
+              Back to Lessons
+            </Link>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   const handleAudioPlay = (audioPath) => {
@@ -206,7 +207,11 @@ In this lesson, we'll introduce you to the basic structure of Hangul and show yo
                 marginBottom: '0.5rem'
               }}>
                 {exercise.type === 'quiz' ? '📝' : 
-                 exercise.type === 'flashcard' ? '🃏' : '🎤'}
+                 exercise.type === 'flashcard' ? '🃏' : 
+                 exercise.type === 'fill-in-the-blank' ? '✏️' : 
+                 exercise.type === 'drag-drop' ? '🧩' : 
+                 exercise.type === 'listening' ? '🎧' : 
+                 exercise.type === 'typing' ? '⌨️' : '🎤'}
               </div>
               <h3 style={{ 
                 fontSize: '1rem', 
@@ -216,12 +221,21 @@ In this lesson, we'll introduce you to the basic structure of Hangul and show yo
               }}>
                 {exercise.title}
               </h3>
+              {exerciseProgress[exercise.type] && (
+                <div style={{ 
+                  fontSize: '0.75rem', 
+                  color: 'var(--success-color)',
+                  marginBottom: '0.5rem'
+                }}>
+                  ✓ Completed ({exerciseProgress[exercise.type].score}%)
+                </div>
+              )}
               <button 
                 className="btn btn-primary"
                 style={{ fontSize: '0.75rem', padding: '0.5rem 1rem' }}
-                onClick={() => console.log(`Starting ${exercise.type} exercise`)}
+                onClick={() => startExercise(exercise)}
               >
-                Start Exercise
+                {exerciseProgress[exercise.type] ? 'Practice Again' : 'Start Exercise'}
               </button>
             </div>
           ))}
@@ -248,6 +262,103 @@ In this lesson, we'll introduce you to the basic structure of Hangul and show yo
           </Link>
         </div>
       </div>
+
+      {/* Exercise Modal */}
+      {activeExercise && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000,
+          padding: '1rem'
+        }}>
+          <div style={{
+            backgroundColor: 'var(--bg-primary)',
+            borderRadius: 'var(--border-radius)',
+            maxWidth: '800px',
+            width: '100%',
+            maxHeight: '90vh',
+            overflow: 'auto',
+            position: 'relative'
+          }}>
+            <button
+              onClick={closeExercise}
+              style={{
+                position: 'absolute',
+                top: '1rem',
+                right: '1rem',
+                background: 'none',
+                border: 'none',
+                fontSize: '1.5rem',
+                cursor: 'pointer',
+                zIndex: 1001,
+                color: 'var(--text-primary)'
+              }}
+            >
+              ✕
+            </button>
+            
+            {activeExercise.type === 'fill-in-the-blank' && (
+              <FillInTheBlankExercise
+                exercise={activeExercise}
+                onComplete={handleExerciseComplete}
+                onProgress={handleExerciseProgress}
+              />
+            )}
+            
+            {activeExercise.type === 'drag-drop' && (
+              <DragDropExercise
+                exercise={activeExercise}
+                onComplete={handleExerciseComplete}
+                onProgress={handleExerciseProgress}
+              />
+            )}
+            
+            {activeExercise.type === 'listening' && (
+              <ListeningExercise
+                exercise={activeExercise}
+                onComplete={handleExerciseComplete}
+                onProgress={handleExerciseProgress}
+              />
+            )}
+            
+            {activeExercise.type === 'typing' && (
+              <TypingExercise
+                exercise={activeExercise}
+                onComplete={handleExerciseComplete}
+                onProgress={handleExerciseProgress}
+              />
+            )}
+            
+            {activeExercise.type === 'quiz' && (
+              <div style={{ padding: '2rem', textAlign: 'center' }}>
+                <h3>Quiz Exercise</h3>
+                <p>Quiz functionality will be implemented in a future update.</p>
+              </div>
+            )}
+            
+            {activeExercise.type === 'flashcard' && (
+              <div style={{ padding: '2rem', textAlign: 'center' }}>
+                <h3>Flashcard Exercise</h3>
+                <p>Flashcard functionality will be implemented in a future update.</p>
+              </div>
+            )}
+            
+            {activeExercise.type === 'pronunciation' && (
+              <div style={{ padding: '2rem', textAlign: 'center' }}>
+                <h3>Pronunciation Exercise</h3>
+                <p>Pronunciation functionality will be implemented in a future update.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

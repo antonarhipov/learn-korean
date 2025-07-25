@@ -141,6 +141,33 @@
               "back": "eo"
             }
           ]
+        },
+        {
+          "type": "typing",
+          "title": "Korean Character Typing Practice",
+          "instructions": "Practice typing Korean vowels and consonants. Focus on accuracy first, then speed will come naturally.",
+          "texts": [
+            {
+              "korean": "ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ",
+              "romanization": "g/k n d/t r/l m b/p s ng j ch k t p h",
+              "translation": "Basic Korean consonants"
+            },
+            {
+              "korean": "ㅏㅑㅓㅕㅗㅛㅜㅠㅡㅣ",
+              "romanization": "a ya eo yeo o yo u yu eu i",
+              "translation": "Basic Korean vowels"
+            },
+            {
+              "korean": "가나다라마바사아자차카타파하",
+              "romanization": "ga na da ra ma ba sa a ja cha ka ta pa ha",
+              "translation": "Korean syllables with 'a' vowel"
+            },
+            {
+              "korean": "고노도로모보소오조초코토포호",
+              "romanization": "go no do ro mo bo so o jo cho ko to po ho",
+              "translation": "Korean syllables with 'o' vowel"
+            }
+          ]
         }
       ]
     },
@@ -189,6 +216,35 @@
               "question": "How do you read '가'?",
               "options": ["ga", "ka", "na", "ba"],
               "correctAnswer": "ga"
+            }
+          ]
+        },
+        {
+          "type": "listening",
+          "title": "Korean Syllable Listening",
+          "instructions": "Listen to the Korean syllables and answer the comprehension questions. You can adjust the playback speed if needed.",
+          "audioUrl": "/assets/audio/syllables-practice.mp3",
+          "transcript": "가, 나, 바, 다, 라, 마, 사",
+          "questions": [
+            {
+              "question": "Which syllable did you hear first?",
+              "type": "multiple-choice",
+              "options": ["가", "나", "바", "다"],
+              "correctAnswer": "가",
+              "hint": "Listen carefully to the beginning of the audio"
+            },
+            {
+              "question": "How many different syllables were pronounced?",
+              "type": "text",
+              "correctAnswer": "7",
+              "hint": "Count each distinct syllable sound"
+            },
+            {
+              "question": "Which syllable sounds like 'ma'?",
+              "type": "multiple-choice",
+              "options": ["가", "나", "바", "마"],
+              "correctAnswer": "마",
+              "hint": "Think about the romanization of each syllable"
             }
           ]
         }
@@ -255,6 +311,31 @@
               "back": "Thank you (formal)"
             }
           ]
+        },
+        {
+          "type": "fill-in-the-blank",
+          "title": "Complete the Greetings",
+          "instructions": "Fill in the blanks with the correct Korean greeting words.",
+          "questions": [
+            {
+              "sentence": "___하세요! (Hello formally)",
+              "correctAnswer": "안녕",
+              "hint": "This is the formal way to say hello",
+              "translation": "Hello! (formal greeting)"
+            },
+            {
+              "sentence": "___합니다. (Thank you formally)",
+              "correctAnswer": "감사",
+              "hint": "This expresses gratitude formally",
+              "translation": "Thank you. (formal thanks)"
+            },
+            {
+              "sentence": "___! (Hello informally)",
+              "correctAnswer": "안녕",
+              "hint": "This is the casual way to say hello",
+              "translation": "Hello! (informal greeting)"
+            }
+          ]
         }
       ]
     },
@@ -317,6 +398,34 @@
             {
               "front": "만나서 반갑습니다",
               "back": "Nice to meet you"
+            }
+          ]
+        },
+        {
+          "type": "drag-drop",
+          "title": "Construct Introduction Sentences",
+          "instructions": "Drag and drop the words to create correct Korean introduction sentences.",
+          "questions": [
+            {
+              "instruction": "Create a sentence meaning 'My name is Kim'",
+              "words": ["제", "이름은", "김", "입니다"],
+              "correctOrder": ["제", "이름은", "김", "입니다"],
+              "translation": "My name is Kim",
+              "context": "Formal self-introduction"
+            },
+            {
+              "instruction": "Create a sentence meaning 'Nice to meet you'",
+              "words": ["만나서", "반갑습니다"],
+              "correctOrder": ["만나서", "반갑습니다"],
+              "translation": "Nice to meet you",
+              "context": "Polite greeting when meeting someone"
+            },
+            {
+              "instruction": "Create a sentence meaning 'I am a student'",
+              "words": ["저는", "학생", "입니다"],
+              "correctOrder": ["저는", "학생", "입니다"],
+              "translation": "I am a student",
+              "context": "Describing your occupation"
             }
           ]
         }
