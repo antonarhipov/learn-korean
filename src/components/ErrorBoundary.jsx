@@ -1,4 +1,5 @@
 import React from 'react'
+import { logComponentError, globalErrorLogger } from '../utils/errorLogger'
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -17,11 +18,12 @@ class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    // Generate unique error ID for tracking
-    const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    
-    // Log error details
-    console.error('ErrorBoundary caught an error:', error, errorInfo)
+    // Use comprehensive error logging system
+    const errorId = logComponentError(
+      this.props.componentName || 'Unknown Component',
+      error,
+      errorInfo
+    )
     
     // Store error details in state
     this.setState({
@@ -29,33 +31,6 @@ class ErrorBoundary extends React.Component {
       errorInfo: errorInfo,
       errorId: errorId
     })
-
-    // Log to localStorage for debugging (in development)
-    if (process.env.NODE_ENV === 'development') {
-      const errorLog = {
-        timestamp: new Date().toISOString(),
-        errorId: errorId,
-        error: {
-          name: error.name,
-          message: error.message,
-          stack: error.stack
-        },
-        errorInfo: errorInfo,
-        component: this.props.componentName || 'Unknown',
-        url: window.location.href,
-        userAgent: navigator.userAgent
-      }
-      
-      try {
-        const existingLogs = JSON.parse(localStorage.getItem('errorLogs') || '[]')
-        existingLogs.push(errorLog)
-        // Keep only last 10 error logs
-        const recentLogs = existingLogs.slice(-10)
-        localStorage.setItem('errorLogs', JSON.stringify(recentLogs))
-      } catch (e) {
-        console.warn('Failed to save error log to localStorage:', e)
-      }
-    }
 
     // Call custom error handler if provided
     if (this.props.onError) {

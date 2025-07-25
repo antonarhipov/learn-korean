@@ -3,6 +3,8 @@
  * for failed asset loads in the Korean language learning application
  */
 
+import { logAssetFailure, logRetryAttempt, logWarning, logError } from './errorLogger'
+
 /**
  * Default retry configuration
  */
@@ -136,6 +138,11 @@ export class AssetRetryManager {
         this.retryHistory.delete(assetUrl)
         this.failedAssets.delete(assetUrl)
         
+        // Log successful retry if this wasn't the first attempt
+        if (attempt > 0) {
+          logRetryAttempt(assetUrl, attempt + 1, 0, true)
+        }
+        
         return result
         
       } catch (error) {
@@ -146,11 +153,16 @@ export class AssetRetryManager {
           timestamp: new Date().toISOString()
         })
         
-        console.warn(`Asset load attempt ${attempt + 1} failed for ${assetUrl}:`, error)
+        // Log the retry attempt
+        logRetryAttempt(assetUrl, attempt + 1, 0, false)
         
         // Check if error is retryable
         if (!isRetryableError(error, config)) {
-          console.warn(`Non-retryable error for ${assetUrl}:`, error)
+          logError('asset_loading', `Non-retryable error for ${assetUrl}`, {
+            assetUrl,
+            error: error.message || error.toString(),
+            attempt: attempt + 1
+          })
           this.failedAssets.add(assetUrl)
           break
         }
@@ -158,15 +170,15 @@ export class AssetRetryManager {
         // Don't delay after the last attempt
         if (attempt < config.maxRetries) {
           const delay = calculateDelay(attempt, config)
-          console.log(`Retrying ${assetUrl} in ${Math.round(delay)}ms (attempt ${attempt + 2}/${config.maxRetries + 1})`)
+          logRetryAttempt(assetUrl, attempt + 2, delay, false)
           await sleep(delay)
         }
       }
     }
     
-    // All retries exhausted
+    // All retries exhausted - log permanent failure
     this.failedAssets.add(assetUrl)
-    console.error(`Asset load failed permanently after ${config.maxRetries + 1} attempts: ${assetUrl}`)
+    logAssetFailure(assetUrl, 'unknown', lastError || new Error(`Failed to load asset: ${assetUrl}`), config.maxRetries + 1)
     throw lastError || new Error(`Failed to load asset: ${assetUrl}`)
   }
 
