@@ -9,6 +9,12 @@
       "prerequisites": [],
       "nextLessons": ["lesson-002"],
       "estimatedTime": 15,
+      "culturalContext": {
+        "historicalBackground": "Hangul was created by King Sejong the Great in 1443 during the Joseon Dynasty. Before Hangul, Koreans used Chinese characters (Hanja), which were difficult for common people to learn. King Sejong wanted to create a writing system that would be accessible to all social classes.",
+        "culturalSignificance": "Hangul Day (한글날) is celebrated on October 9th in South Korea to honor the creation of the Korean alphabet. The creation of Hangul is considered one of the greatest achievements in Korean history and represents the democratic ideals of making literacy accessible to everyone.",
+        "modernRelevance": "Today, Hangul is praised by linguists worldwide for its scientific design. UNESCO has established the King Sejong Literacy Prize in honor of the Korean alphabet's contribution to global literacy.",
+        "etiquette": "When writing Korean, it's important to maintain proper stroke order and character proportions. In formal situations, using correct Hangul spelling and avoiding excessive use of English loanwords shows respect for Korean culture."
+      },
       "content": {
         "text": "Hangul is the Korean alphabet, created by King Sejong in 1443. It is considered one of the most scientific writing systems in the world.\n\nThe Korean alphabet consists of 14 basic consonants and 10 basic vowels. These letters are combined to form syllable blocks, which make up Korean words.\n\nIn this lesson, we'll introduce you to the basic structure of Hangul and show you how Korean characters are formed.",
         "examples": [
@@ -259,6 +265,13 @@
       "prerequisites": ["lesson-003"],
       "nextLessons": ["lesson-005"],
       "estimatedTime": 18,
+      "culturalContext": {
+        "historicalBackground": "Korean greeting customs have been shaped by Confucian values emphasizing respect for hierarchy and social harmony. The concept of 'nunchi' (눈치) - social awareness and sensitivity - plays a crucial role in choosing appropriate greetings.",
+        "culturalSignificance": "Greetings in Korea are not just words but expressions of respect and social positioning. The level of formality used indicates the relationship between speakers and shows cultural awareness.",
+        "socialNorms": "Always bow slightly when greeting, especially to elders or superiors. The depth of the bow indicates the level of respect. Use formal language (존댓말) with people older than you, in higher positions, or when meeting for the first time.",
+        "etiquette": "When greeting in business settings, exchange business cards with both hands and a slight bow. In casual settings with friends, informal greetings are acceptable. Always respond to greetings - ignoring them is considered very rude.",
+        "modernUsage": "While traditional bowing is still important, handshakes are becoming more common in business contexts. However, combining a handshake with a slight bow shows cultural sensitivity."
+      },
       "content": {
         "text": "Now that you can read basic Korean characters, let's learn some essential greetings.\n\nGreetings are fundamental to Korean culture and show respect and politeness. Korean has different levels of formality, which we'll explore.\n\nLet's start with the most common greetings you'll use every day.",
         "examples": [
@@ -430,6 +443,351 @@
           ]
         }
       ]
+    },
+    {
+      "id": "lesson-006",
+      "title": "Korean Cultural Traditions",
+      "level": "intermediate",
+      "category": "culture",
+      "description": "Explore Korean cultural traditions, holidays, and customs.",
+      "prerequisites": ["lesson-005"],
+      "nextLessons": ["lesson-007"],
+      "estimatedTime": 30,
+      "culturalContext": {
+        "historicalBackground": "Korean cultural traditions have been shaped by thousands of years of history, influenced by Confucianism, Buddhism, and Shamanism. Many traditions emphasize family harmony, respect for elders, and seasonal celebrations.",
+        "culturalSignificance": "Understanding Korean traditions helps build deeper connections with Korean people and shows respect for their heritage. Many traditions are still actively practiced in modern Korea.",
+        "socialNorms": "Participating in or acknowledging Korean traditions shows cultural sensitivity. During holidays like Chuseok or Seollal, it's important to understand the customs around family gatherings and ancestral rituals.",
+        "etiquette": "When invited to traditional celebrations, dress modestly and follow the lead of your hosts. Bringing appropriate gifts and showing interest in the cultural significance demonstrates respect.",
+        "modernRelevance": "While Korea has modernized rapidly, traditional values remain important. Many young Koreans still observe traditional holidays and customs, often blending them with contemporary practices."
+      },
+      "content": {
+        "text": "Korean culture is rich with traditions that have been passed down through generations. Understanding these traditions will help you connect more deeply with Korean society and language.\n\nIn this lesson, we'll explore major Korean holidays, traditional customs, and their modern significance. We'll also learn vocabulary related to cultural practices.",
+        "examples": [
+          {
+            "korean": "추석",
+            "romanization": "chuseok",
+            "translation": "Korean Thanksgiving (Autumn Festival)",
+            "audio": "/assets/audio/chuseok.mp3",
+            "culturalNote": "Chuseok is one of the most important Korean holidays, when families gather to honor ancestors and share traditional foods."
+          },
+          {
+            "korean": "설날",
+            "romanization": "seollal",
+            "translation": "Korean New Year",
+            "audio": "/assets/audio/seollal.mp3",
+            "culturalNote": "Seollal marks the beginning of the lunar new year and involves traditional games, foods, and ancestral ceremonies."
+          },
+          {
+            "korean": "한복",
+            "romanization": "hanbok",
+            "translation": "Traditional Korean clothing",
+            "audio": "/assets/audio/hanbok.mp3",
+            "culturalNote": "Hanbok represents Korean aesthetic values and is still worn during special occasions and traditional ceremonies."
+          },
+          {
+            "korean": "김치",
+            "romanization": "kimchi",
+            "translation": "Fermented vegetable dish",
+            "audio": "/assets/audio/kimchi.mp3",
+            "culturalNote": "Kimchi is not just food but a cultural symbol representing Korean ingenuity in food preservation and communal preparation traditions."
+          }
+        ],
+        "media": {
+          "image": "/assets/images/korean-traditions.jpg",
+          "video": "/assets/videos/chuseok-celebration.mp4",
+          "culturalArticles": [
+            {
+              "title": "The Significance of Chuseok in Modern Korea",
+              "url": "/assets/articles/chuseok-modern-korea.html",
+              "summary": "How traditional harvest festivals adapt to contemporary Korean society"
+            },
+            {
+              "title": "Hanbok: Traditional Dress in the Digital Age",
+              "url": "/assets/articles/hanbok-digital-age.html",
+              "summary": "The revival and modernization of Korean traditional clothing"
+            }
+          ],
+          "music": [
+            {
+              "title": "Traditional Korean Folk Song - Arirang",
+              "url": "/assets/audio/arirang-traditional.mp3",
+              "description": "Korea's most famous folk song, representing the Korean spirit and cultural identity"
+            }
+          ]
+        }
+      },
+      "exercises": [
+        {
+          "type": "cultural-quiz",
+          "title": "Korean Traditions Quiz",
+          "questions": [
+            {
+              "question": "What is the most important activity during Chuseok?",
+              "options": ["Shopping", "Honoring ancestors", "Watching TV", "Working"],
+              "correctAnswer": "Honoring ancestors",
+              "culturalExplanation": "Chuseok is primarily about family reunions and ancestral ceremonies called 'charye', where families prepare special foods and pay respects to deceased family members."
+            },
+            {
+              "question": "When is it most appropriate to wear hanbok?",
+              "options": ["Every day", "Only in museums", "Special occasions and holidays", "Never"],
+              "correctAnswer": "Special occasions and holidays",
+              "culturalExplanation": "While hanbok was daily wear historically, today it's worn during traditional holidays, weddings, coming-of-age ceremonies, and cultural events."
+            },
+            {
+              "question": "What does kimchi represent in Korean culture beyond being food?",
+              "options": ["Nothing special", "Community and tradition", "Wealth", "Modern technology"],
+              "correctAnswer": "Community and tradition",
+              "culturalExplanation": "Kimchi-making (kimjang) is a communal activity that brings families and communities together, representing cooperation, preparation for winter, and cultural continuity."
+            }
+          ]
+        },
+        {
+          "type": "cultural-matching",
+          "title": "Match Traditions with Their Meanings",
+          "instructions": "Match each Korean tradition with its cultural significance.",
+          "pairs": [
+            {
+              "tradition": "세배 (sebae)",
+              "meaning": "New Year bow to elders",
+              "explanation": "A formal bow performed on New Year's Day to show respect to elders and receive blessings for the new year"
+            },
+            {
+              "tradition": "차례 (charye)",
+              "meaning": "Ancestral ceremony",
+              "explanation": "A ritual performed during major holidays to honor deceased family members with food offerings and prayers"
+            },
+            {
+              "tradition": "윷놀이 (yutnori)",
+              "meaning": "Traditional board game",
+              "explanation": "A family game played during holidays that brings generations together and represents Korean values of strategy and luck"
+            }
+          ]
+        },
+        {
+          "type": "media-comprehension",
+          "title": "Cultural Media Analysis",
+          "instructions": "Watch the Chuseok celebration video and answer questions about Korean cultural practices.",
+          "mediaUrl": "/assets/videos/chuseok-celebration.mp4",
+          "questions": [
+            {
+              "question": "What foods are typically prepared for Chuseok?",
+              "type": "multiple-select",
+              "options": ["송편 (songpyeon)", "불고기 (bulgogi)", "피자 (pizza)", "전 (jeon)"],
+              "correctAnswers": ["송편 (songpyeon)", "전 (jeon)"],
+              "explanation": "Songpyeon (rice cakes) and jeon (Korean pancakes) are traditional Chuseok foods, while bulgogi might be served but pizza is not traditional."
+            },
+            {
+              "question": "How do family members show respect during the ancestral ceremony?",
+              "type": "text",
+              "correctAnswer": "bowing",
+              "explanation": "Family members perform deep bows (절) as a sign of respect and remembrance for their ancestors."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesson-007",
+      "title": "Korean Business Culture & Modern Society",
+      "level": "advanced",
+      "category": "business-culture",
+      "description": "Navigate Korean workplace culture, business etiquette, and modern social dynamics.",
+      "prerequisites": ["lesson-006"],
+      "nextLessons": [],
+      "estimatedTime": 45,
+      "culturalContext": {
+        "historicalBackground": "Korean business culture has evolved from traditional Confucian hierarchies combined with rapid industrialization since the 1960s. The concept of 'jeong' (정) - emotional bonds and loyalty - remains central to business relationships.",
+        "culturalSignificance": "Understanding Korean business culture is crucial for professional success in Korea. The balance between traditional respect and modern efficiency defines contemporary Korean workplaces.",
+        "socialNorms": "Hierarchy is still important but becoming more flexible. Age, position, and company seniority determine interaction styles. Building personal relationships ('인맥' - inmak) is often as important as professional competence.",
+        "etiquette": "Business cards are exchanged with both hands and a bow. Drinking culture ('회식' - hoesik) is important for team bonding. Dress conservatively and arrive early to meetings. Never refuse a senior's invitation to dinner or drinks.",
+        "modernRelevance": "Younger generations are changing workplace dynamics, introducing more casual communication and work-life balance concepts while maintaining core respect principles."
+      },
+      "content": {
+        "text": "Korean business culture blends traditional Confucian values with modern global practices. Success in Korean professional environments requires understanding both formal protocols and informal relationship-building.\n\nThis advanced lesson covers essential business vocabulary, workplace etiquette, and cultural nuances that will help you navigate Korean professional settings effectively.",
+        "examples": [
+          {
+            "korean": "회사",
+            "romanization": "hoesa",
+            "translation": "company",
+            "audio": "/assets/audio/hoesa.mp3",
+            "culturalNote": "Korean companies often function like extended families, with strong loyalty expectations and hierarchical relationships."
+          },
+          {
+            "korean": "상사",
+            "romanization": "sangsa",
+            "translation": "boss/superior",
+            "audio": "/assets/audio/sangsa.mp3",
+            "culturalNote": "The relationship with your 상사 is crucial in Korean workplaces. Showing proper respect and building trust is essential for career advancement."
+          },
+          {
+            "korean": "회식",
+            "romanization": "hoesik",
+            "translation": "company dinner/drinking gathering",
+            "audio": "/assets/audio/hoesik.mp3",
+            "culturalNote": "회식 is not just socializing but an important part of team building and business relationship development. Attendance is often expected."
+          },
+          {
+            "korean": "눈치",
+            "romanization": "nunchi",
+            "translation": "social awareness/reading the room",
+            "audio": "/assets/audio/nunchi.mp3",
+            "culturalNote": "눈치 is a crucial skill in Korean business - the ability to sense unspoken feelings and social dynamics in professional situations."
+          },
+          {
+            "korean": "워라밸",
+            "romanization": "worabaek",
+            "translation": "work-life balance",
+            "audio": "/assets/audio/worabaek.mp3",
+            "culturalNote": "A modern concept gaining popularity among younger Korean workers, challenging traditional long-hour work culture."
+          }
+        ],
+        "media": {
+          "image": "/assets/images/korean-business-culture.jpg",
+          "video": "/assets/videos/korean-workplace-etiquette.mp4",
+          "culturalArticles": [
+            {
+              "title": "The Evolution of Korean Corporate Culture",
+              "url": "/assets/articles/korean-corporate-evolution.html",
+              "summary": "How Korean businesses are adapting traditional hierarchies to modern global practices"
+            },
+            {
+              "title": "Nunchi: The Korean Art of Social Intelligence",
+              "url": "/assets/articles/nunchi-business-success.html",
+              "summary": "Understanding and developing nunchi for professional success in Korea"
+            },
+            {
+              "title": "Generation Gap in Korean Workplaces",
+              "url": "/assets/articles/korean-workplace-generations.html",
+              "summary": "How different generations navigate changing workplace cultures in Korea"
+            }
+          ],
+          "music": [
+            {
+              "title": "Modern Korean Business Podcast",
+              "url": "/assets/audio/korean-business-podcast.mp3",
+              "description": "Interviews with Korean business leaders discussing modern workplace culture"
+            }
+          ]
+        }
+      },
+      "exercises": [
+        {
+          "type": "scenario-analysis",
+          "title": "Business Situation Analysis",
+          "instructions": "Analyze these Korean business scenarios and choose the most culturally appropriate response.",
+          "scenarios": [
+            {
+              "situation": "Your Korean boss invites you to 회식 (company dinner) but you have personal plans.",
+              "options": [
+                "Politely decline and explain your personal plans",
+                "Accept the invitation and reschedule your personal plans",
+                "Suggest meeting another time",
+                "Ask if you can bring your family"
+              ],
+              "correctAnswer": "Accept the invitation and reschedule your personal plans",
+              "explanation": "In Korean business culture, 회식 invitations from superiors are rarely optional. They're important for team bonding and showing commitment to the company. Declining could be seen as disrespectful or showing lack of team spirit.",
+              "culturalInsight": "Building relationships through shared meals and drinks is fundamental to Korean business success."
+            },
+            {
+              "situation": "During a meeting, you disagree with your senior colleague's proposal.",
+              "options": [
+                "Immediately voice your disagreement",
+                "Wait until after the meeting to discuss privately",
+                "Ask clarifying questions to indirectly express concerns",
+                "Stay silent and implement their proposal"
+              ],
+              "correctAnswer": "Ask clarifying questions to indirectly express concerns",
+              "explanation": "Direct confrontation in meetings can cause loss of face. Using questions to guide discussion allows for face-saving while still addressing concerns.",
+              "culturalInsight": "Preserving harmony and face (체면) is more important than being directly right in Korean business culture."
+            }
+          ]
+        },
+        {
+          "type": "cultural-vocabulary",
+          "title": "Business Korean Vocabulary",
+          "instructions": "Match advanced business terms with their cultural contexts.",
+          "terms": [
+            {
+              "korean": "선배",
+              "romanization": "seonbae",
+              "translation": "senior colleague",
+              "culturalContext": "Someone who joined the company before you, regardless of age. This relationship involves mentorship and respect obligations.",
+              "usageExample": "Always greet your 선배 first and show proper respect in meetings."
+            },
+            {
+              "korean": "후배",
+              "romanization": "hubae",
+              "translation": "junior colleague",
+              "culturalContext": "Someone who joined after you. You have mentorship responsibilities and they should show you respect.",
+              "usageExample": "Help your 후배 understand company culture and procedures."
+            },
+            {
+              "korean": "인맥",
+              "romanization": "inmak",
+              "translation": "personal network/connections",
+              "culturalContext": "Professional and personal relationships that can influence business success. Building 인맥 is crucial for career advancement.",
+              "usageExample": "Strong 인맥 often matters more than individual achievement in Korean business."
+            }
+          ]
+        },
+        {
+          "type": "role-play",
+          "title": "Business Meeting Simulation",
+          "instructions": "Practice appropriate responses in Korean business meeting scenarios.",
+          "rolePlayScenarios": [
+            {
+              "context": "You're presenting a project proposal to senior executives",
+              "yourRole": "Project manager",
+              "situation": "The CEO asks a challenging question about your timeline",
+              "appropriateResponses": [
+                "죄송합니다. 다시 검토해보겠습니다. (I apologize. I will review this again.)",
+                "좋은 지적입니다. 추가로 고려하겠습니다. (That's a good point. I will consider it further.)"
+              ],
+              "inappropriateResponses": [
+                "그건 제 책임이 아닙니다. (That's not my responsibility.)",
+                "그 질문은 관련이 없습니다. (That question is irrelevant.)"
+              ],
+              "culturalGuidance": "Always show humility and willingness to improve, even when you believe you're correct."
+            }
+          ]
+        }
+      ],
+      "feedback": {
+        "enabled": true,
+        "categories": ["content-accuracy", "cultural-relevance", "difficulty-level", "engagement"],
+        "questions": [
+          {
+            "id": "cultural-accuracy",
+            "question": "How accurately did this lesson represent Korean business culture?",
+            "type": "rating",
+            "scale": 5
+          },
+          {
+            "id": "practical-usefulness",
+            "question": "How useful is this content for real business situations?",
+            "type": "rating",
+            "scale": 5
+          },
+          {
+            "id": "difficulty-appropriate",
+            "question": "Was the difficulty level appropriate for advanced learners?",
+            "type": "boolean"
+          },
+          {
+            "id": "additional-topics",
+            "question": "What other Korean business culture topics would you like to learn about?",
+            "type": "text"
+          }
+        ]
+      },
+      "version": "1.0",
+      "lastUpdated": "2025-07-25",
+      "contentMetrics": {
+        "engagementTracking": true,
+        "completionTracking": true,
+        "difficultyAnalytics": true,
+        "culturalAccuracyFeedback": true
+      }
     }
   ],
   "modules": [
@@ -448,6 +806,34 @@
       "lessons": ["lesson-004", "lesson-005"],
       "level": "beginner",
       "estimatedTime": 40
+    },
+    {
+      "id": "module-3",
+      "title": "Korean Cultural Traditions",
+      "description": "Explore Korean culture, traditions, and social customs",
+      "lessons": ["lesson-006"],
+      "level": "intermediate",
+      "estimatedTime": 30
+    },
+    {
+      "id": "module-4",
+      "title": "Business & Modern Society",
+      "description": "Navigate Korean workplace culture and contemporary social dynamics",
+      "lessons": ["lesson-007"],
+      "level": "advanced",
+      "estimatedTime": 45
     }
-  ]
+  ],
+  "contentQuality": {
+    "version": "1.0",
+    "lastUpdated": "2025-07-25",
+    "testingEnabled": true,
+    "feedbackCollection": true,
+    "analytics": {
+      "engagementTracking": true,
+      "completionRates": true,
+      "difficultyAnalysis": true,
+      "culturalAccuracyMetrics": true
+    }
+  }
 }
