@@ -257,3 +257,380 @@
     max-width: none;
   }
 }
+
+/* Error Boundary Styles */
+.error-boundary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 2rem;
+  background-color: var(--bg-primary);
+}
+
+.error-boundary-content {
+  max-width: 600px;
+  text-align: center;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.error-boundary-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.error-boundary-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.error-boundary-message {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.error-boundary-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.error-boundary-details {
+  margin: 1.5rem 0;
+  text-align: left;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.error-boundary-details summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.error-boundary-details summary:hover {
+  color: var(--primary-color);
+}
+
+.error-boundary-error-info {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.error-boundary-error-info p {
+  margin-bottom: 0.5rem;
+}
+
+.error-boundary-error-info pre {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin-top: 0.5rem;
+}
+
+/* Error boundary responsive adjustments */
+@media (max-width: 768px) {
+  .error-boundary {
+    padding: 1rem;
+    min-height: 300px;
+  }
+  
+  .error-boundary-content {
+    padding: 1.5rem;
+  }
+  
+  .error-boundary-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .error-boundary-actions .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Audio Player Styles */
+.audio-player {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin: 0.5rem 0;
+}
+
+.audio-transcript {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background-color: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+.audio-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.audio-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  min-height: 3rem;
+}
+
+.audio-btn:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.audio-btn:active {
+  transform: scale(0.95);
+}
+
+.audio-btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.audio-btn-disabled:hover {
+  background-color: transparent;
+}
+
+.audio-progress-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.audio-progress-bar {
+  flex: 1;
+  height: 6px;
+  background-color: var(--bg-tertiary);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.audio-progress-fill {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  transition: width 0.1s ease;
+}
+
+.audio-time {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 0.25rem;
+  min-width: 80px;
+  justify-content: center;
+}
+
+/* Audio Player Fallback Styles */
+.audio-player-fallback {
+  background-color: var(--bg-tertiary);
+  border: 1px dashed var(--border-color);
+  opacity: 0.8;
+}
+
+.audio-fallback-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.audio-fallback-icon {
+  font-size: 1.5rem;
+  opacity: 0.7;
+}
+
+.audio-fallback-text {
+  flex: 1;
+}
+
+.audio-fallback-message {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.audio-fallback-transcript {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.audio-controls-disabled {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0.6;
+}
+
+.audio-status {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Audio Player Loading Styles */
+.audio-player-loading {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+}
+
+.audio-loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  color: var(--text-secondary);
+}
+
+.audio-loading-spinner {
+  font-size: 1.25rem;
+  animation: spin 1s linear infinite;
+}
+
+/* Image Fallback Styles */
+.image-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-tertiary);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+}
+
+.image-fallback-content {
+  text-align: center;
+  padding: 1rem;
+}
+
+.image-fallback-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.image-fallback-text {
+  margin-bottom: 0.75rem;
+}
+
+.image-fallback-message {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.image-fallback-alt {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.image-retry-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.image-retry-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Image Loading Styles */
+.image-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  color: var(--text-secondary);
+}
+
+.image-loading-content {
+  text-align: center;
+  padding: 1rem;
+}
+
+.image-loading-spinner {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  animation: spin 1s linear infinite;
+}
+
+/* Spin animation for loading spinners */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media fallback responsive adjustments */
+@media (max-width: 768px) {
+  .audio-controls {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .audio-progress-container {
+    width: 100%;
+  }
+  
+  .audio-btn {
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .image-fallback-content {
+    padding: 0.75rem;
+  }
+  
+  .image-fallback-icon {
+    font-size: 1.5rem;
+  }
+}
