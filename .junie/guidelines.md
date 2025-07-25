@@ -1,13 +1,23 @@
 # Task List Management Guidelines
 
 ## Overview
-The `docs/tasks.md` file contains 110 enumerated technical tasks derived from the development plan. Tasks are organized by phases and priorities for systematic implementation.
+The project uses two main task management files:
+- **`docs/tasks.md`**: Contains 110 enumerated technical tasks derived from the overall development plan
+- **`docs/quiz-tasks.md`**: Contains 49 specialized tasks for implementing quiz functionality
+
+Both files are organized by phases and priorities for systematic implementation.
 
 ## Task Structure
 - **Format:** `[ ]` checkbox followed by task description
 - **Numbering:** Sequential 1-110 across all phases
 - **Phases:** 6 phases from Foundation to Advanced Features
 - **Priorities:** Critical > High > Medium > Low
+
+### Quiz Tasks Structure
+- **File:** `docs/quiz-tasks.md`
+- **Numbering:** Sequential 1-49 across 3 phases
+- **Phases:** Component Creation → Integration → Enhancement
+- **Focus:** Specialized quiz functionality implementation
 
 ## Working with Tasks
 
@@ -31,6 +41,8 @@ The `docs/tasks.md` file contains 110 enumerated technical tasks derived from th
 ### Progress Tracking
 - Use `git grep "\[x\]" docs/tasks.md | wc -l` to count completed tasks
 - Generate progress reports: `(completed_tasks / 110) * 100`
+- Use `git grep "\[x\]" docs/quiz-tasks.md | wc -l` to count completed quiz tasks
+- Generate quiz progress: `(completed_quiz_tasks / 49) * 100`
 - Review and update task priorities quarterly
 
 ### Current Development Status Management
