@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { usePerformanceMonitor } from '../utils/performanceMonitor'
 
 const Home = () => {
+  const { measureAsync } = usePerformanceMonitor('Home')
+
+  // Monitor component mount performance
+  useEffect(() => {
+    measureAsync('page_load', async () => {
+      // Simulate page content loading
+      await new Promise(resolve => setTimeout(resolve, 0))
+      return 'Home page loaded'
+    })
+  }, [measureAsync])
+
   return (
     <div className="page-container">
       <div className="page-header">

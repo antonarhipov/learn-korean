@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { usePerformanceMonitor } from '../utils/performanceMonitor'
 
 const Layout = ({ children }) => {
   const location = useLocation()
+  const { measureRender, measureAsync } = usePerformanceMonitor('Layout')
 
   const isActive = (path) => {
     return location.pathname === path
   }
+
+  // Monitor navigation performance
+  useEffect(() => {
+    measureAsync('navigation', async () => {
+      // Simulate navigation completion
+      await new Promise(resolve => setTimeout(resolve, 0))
+      return `Navigated to ${location.pathname}`
+    })
+  }, [location.pathname, measureAsync])
 
   return (
     <div className="layout">

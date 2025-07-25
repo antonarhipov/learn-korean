@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { retryAudioLoad, globalRetryManager } from '../utils/retryMechanism'
+import { usePerformanceMonitor } from '../utils/performanceMonitor'
 
 const AudioPlayer = ({ 
   src, 
@@ -19,6 +20,17 @@ const AudioPlayer = ({
   const [retryAttempts, setRetryAttempts] = useState(0)
   const [isRetrying, setIsRetrying] = useState(false)
   const audioRef = useRef(null)
+  const { measureAsync } = usePerformanceMonitor('AudioPlayer')
+
+  // Monitor audio loading performance
+  useEffect(() => {
+    if (src && !hasError && !isLoading) {
+      measureAsync('audio_ready', async () => {
+        await new Promise(resolve => setTimeout(resolve, 0))
+        return `Audio ready: ${src}`
+      })
+    }
+  }, [src, hasError, isLoading, measureAsync])
 
   useEffect(() => {
     if (!src) {

@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { retryImageLoad, globalRetryManager } from '../utils/retryMechanism'
+import { usePerformanceMonitor } from '../utils/performanceMonitor'
 
 const ImageWithFallback = ({
   src,
@@ -21,6 +22,17 @@ const ImageWithFallback = ({
   const [retryAttempts, setRetryAttempts] = useState(0)
   const [isRetrying, setIsRetrying] = useState(false)
   const imgRef = useRef(null)
+  const { measureAsync } = usePerformanceMonitor('ImageWithFallback')
+
+  // Monitor image loading performance
+  useEffect(() => {
+    if (src && !hasError && !isLoading) {
+      measureAsync('image_ready', async () => {
+        await new Promise(resolve => setTimeout(resolve, 0))
+        return `Image ready: ${src}`
+      })
+    }
+  }, [src, hasError, isLoading, measureAsync])
 
   useEffect(() => {
     if (!src) {
