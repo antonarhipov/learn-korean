@@ -54,3 +54,7 @@ The `docs/tasks.md` file contains 110 enumerated technical tasks derived from th
 - Document architectural decisions for tasks 1-18
 - Create feature branches for complex tasks (20+ lines of code)
 - Update documentation when completing documentation tasks (93-97)
+
+## Development
+
+**IMPORTANT** After completing a task, validate, if the application builds and is functional (use tools)

@@ -1,0 +1,344 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-001",
+      "title": "Introduction to Hangul",
+      "level": "beginner",
+      "category": "pronunciation",
+      "description": "Learn the basics of the Korean alphabet.",
+      "prerequisites": [],
+      "nextLessons": ["lesson-002"],
+      "estimatedTime": 15,
+      "content": {
+        "text": "Hangul is the Korean alphabet, created by King Sejong in 1443. It is considered one of the most scientific writing systems in the world.\n\nThe Korean alphabet consists of 14 basic consonants and 10 basic vowels. These letters are combined to form syllable blocks, which make up Korean words.\n\nIn this lesson, we'll introduce you to the basic structure of Hangul and show you how Korean characters are formed.",
+        "examples": [
+          {
+            "korean": "ㄱ",
+            "romanization": "g/k",
+            "translation": "Consonant G/K",
+            "audio": "/assets/audio/g.mp3"
+          },
+          {
+            "korean": "ㄴ",
+            "romanization": "n",
+            "translation": "Consonant N",
+            "audio": "/assets/audio/n.mp3"
+          },
+          {
+            "korean": "ㅏ",
+            "romanization": "a",
+            "translation": "Vowel A",
+            "audio": "/assets/audio/a.mp3"
+          }
+        ],
+        "media": {
+          "image": "/assets/images/hangul-chart.jpg",
+          "video": null
+        }
+      },
+      "exercises": [
+        {
+          "type": "quiz",
+          "title": "Hangul Recognition Quiz",
+          "questions": [
+            {
+              "question": "Which letter represents 'g/k'?",
+              "options": ["ㄱ", "ㄴ", "ㄷ", "ㄹ"],
+              "correctAnswer": "ㄱ"
+            },
+            {
+              "question": "What does 'ㅏ' represent?",
+              "options": ["Consonant", "Vowel A", "Vowel O", "Silent letter"],
+              "correctAnswer": "Vowel A"
+            }
+          ]
+        },
+        {
+          "type": "flashcard",
+          "title": "Character Flashcards",
+          "cards": [
+            {
+              "front": "ㄱ",
+              "back": "g/k"
+            },
+            {
+              "front": "ㄴ",
+              "back": "n"
+            },
+            {
+              "front": "ㅏ",
+              "back": "a"
+            }
+          ]
+        },
+        {
+          "type": "pronunciation",
+          "title": "Pronunciation Practice",
+          "audio": "/assets/audio/hangul-sounds.mp3",
+          "text": "ㄱ, ㄴ, ㅏ",
+          "instructions": "Repeat after the audio."
+        }
+      ]
+    },
+    {
+      "id": "lesson-002",
+      "title": "Vowels and Consonants",
+      "level": "beginner",
+      "category": "pronunciation",
+      "description": "Learn the complete set of Korean vowels and consonants.",
+      "prerequisites": ["lesson-001"],
+      "nextLessons": ["lesson-003"],
+      "estimatedTime": 20,
+      "content": {
+        "text": "Now that you understand the basics of Hangul, let's explore all the vowels and consonants in detail.\n\nKorean has 14 basic consonants and 10 basic vowels. There are also compound vowels and double consonants that we'll cover in later lessons.\n\nEach character has a specific shape and sound, and understanding these will help you read Korean words.",
+        "examples": [
+          {
+            "korean": "ㅂ",
+            "romanization": "b/p",
+            "translation": "Consonant B/P",
+            "audio": "/assets/audio/b.mp3"
+          },
+          {
+            "korean": "ㅓ",
+            "romanization": "eo",
+            "translation": "Vowel EO",
+            "audio": "/assets/audio/eo.mp3"
+          },
+          {
+            "korean": "ㅗ",
+            "romanization": "o",
+            "translation": "Vowel O",
+            "audio": "/assets/audio/o.mp3"
+          }
+        ],
+        "media": {
+          "image": "/assets/images/vowels-consonants.jpg",
+          "video": null
+        }
+      },
+      "exercises": [
+        {
+          "type": "quiz",
+          "title": "Vowel and Consonant Quiz",
+          "questions": [
+            {
+              "question": "Which is a vowel?",
+              "options": ["ㅂ", "ㅓ", "ㄱ", "ㄴ"],
+              "correctAnswer": "ㅓ"
+            }
+          ]
+        },
+        {
+          "type": "flashcard",
+          "title": "More Characters",
+          "cards": [
+            {
+              "front": "ㅂ",
+              "back": "b/p"
+            },
+            {
+              "front": "ㅓ",
+              "back": "eo"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesson-003",
+      "title": "Reading Practice",
+      "level": "beginner",
+      "category": "pronunciation",
+      "description": "Practice reading simple Korean syllables.",
+      "prerequisites": ["lesson-002"],
+      "nextLessons": ["lesson-004"],
+      "estimatedTime": 25,
+      "content": {
+        "text": "Now let's put together what we've learned and start reading Korean syllables.\n\nKorean syllables are formed by combining consonants and vowels in specific patterns. The most basic pattern is consonant + vowel.\n\nLet's practice reading some simple syllables.",
+        "examples": [
+          {
+            "korean": "가",
+            "romanization": "ga",
+            "translation": "GA syllable",
+            "audio": "/assets/audio/ga.mp3"
+          },
+          {
+            "korean": "나",
+            "romanization": "na",
+            "translation": "NA syllable",
+            "audio": "/assets/audio/na.mp3"
+          },
+          {
+            "korean": "바",
+            "romanization": "ba",
+            "translation": "BA syllable",
+            "audio": "/assets/audio/ba.mp3"
+          }
+        ],
+        "media": {
+          "image": "/assets/images/syllable-formation.jpg",
+          "video": null
+        }
+      },
+      "exercises": [
+        {
+          "type": "quiz",
+          "title": "Syllable Reading Quiz",
+          "questions": [
+            {
+              "question": "How do you read '가'?",
+              "options": ["ga", "ka", "na", "ba"],
+              "correctAnswer": "ga"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesson-004",
+      "title": "Basic Greetings",
+      "level": "beginner",
+      "category": "vocabulary",
+      "description": "Learn essential Korean greetings for daily use.",
+      "prerequisites": ["lesson-003"],
+      "nextLessons": ["lesson-005"],
+      "estimatedTime": 18,
+      "content": {
+        "text": "Now that you can read basic Korean characters, let's learn some essential greetings.\n\nGreetings are fundamental to Korean culture and show respect and politeness. Korean has different levels of formality, which we'll explore.\n\nLet's start with the most common greetings you'll use every day.",
+        "examples": [
+          {
+            "korean": "안녕하세요",
+            "romanization": "annyeonghaseyo",
+            "translation": "Hello (formal)",
+            "audio": "/assets/audio/annyeonghaseyo.mp3"
+          },
+          {
+            "korean": "안녕",
+            "romanization": "annyeong",
+            "translation": "Hello (informal)",
+            "audio": "/assets/audio/annyeong.mp3"
+          },
+          {
+            "korean": "감사합니다",
+            "romanization": "gamsahamnida",
+            "translation": "Thank you (formal)",
+            "audio": "/assets/audio/gamsahamnida.mp3"
+          }
+        ],
+        "media": {
+          "image": "/assets/images/greetings.jpg",
+          "video": null
+        }
+      },
+      "exercises": [
+        {
+          "type": "quiz",
+          "title": "Greetings Quiz",
+          "questions": [
+            {
+              "question": "How do you say 'Hello' formally in Korean?",
+              "options": ["안녕", "안녕하세요", "감사합니다", "안녕히가세요"],
+              "correctAnswer": "안녕하세요"
+            }
+          ]
+        },
+        {
+          "type": "flashcard",
+          "title": "Greeting Flashcards",
+          "cards": [
+            {
+              "front": "안녕하세요",
+              "back": "Hello (formal)"
+            },
+            {
+              "front": "감사합니다",
+              "back": "Thank you (formal)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lesson-005",
+      "title": "Introducing Yourself",
+      "level": "beginner",
+      "category": "vocabulary",
+      "description": "Learn how to introduce yourself in Korean.",
+      "prerequisites": ["lesson-004"],
+      "nextLessons": [],
+      "estimatedTime": 22,
+      "content": {
+        "text": "Being able to introduce yourself is essential when meeting new people in Korea.\n\nIn this lesson, we'll learn key phrases for self-introduction, including how to say your name, where you're from, and basic personal information.\n\nRemember to use appropriate formality levels based on the situation.",
+        "examples": [
+          {
+            "korean": "제 이름은",
+            "romanization": "je ireumeun",
+            "translation": "My name is",
+            "audio": "/assets/audio/je-ireumeun.mp3"
+          },
+          {
+            "korean": "저는",
+            "romanization": "jeoneun",
+            "translation": "I am (formal)",
+            "audio": "/assets/audio/jeoneun.mp3"
+          },
+          {
+            "korean": "만나서 반갑습니다",
+            "romanization": "mannaseo bangapseumnida",
+            "translation": "Nice to meet you",
+            "audio": "/assets/audio/mannaseo-bangapseumnida.mp3"
+          }
+        ],
+        "media": {
+          "image": "/assets/images/introduction.jpg",
+          "video": null
+        }
+      },
+      "exercises": [
+        {
+          "type": "quiz",
+          "title": "Introduction Quiz",
+          "questions": [
+            {
+              "question": "How do you say 'My name is' in Korean?",
+              "options": ["저는", "제 이름은", "안녕하세요", "감사합니다"],
+              "correctAnswer": "제 이름은"
+            }
+          ]
+        },
+        {
+          "type": "flashcard",
+          "title": "Introduction Phrases",
+          "cards": [
+            {
+              "front": "제 이름은",
+              "back": "My name is"
+            },
+            {
+              "front": "만나서 반갑습니다",
+              "back": "Nice to meet you"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": "module-1",
+      "title": "Hangul Basics",
+      "description": "Learn the Korean alphabet and basic reading skills",
+      "lessons": ["lesson-001", "lesson-002", "lesson-003"],
+      "level": "beginner",
+      "estimatedTime": 60
+    },
+    {
+      "id": "module-2",
+      "title": "Greetings",
+      "description": "Essential greetings and introductions",
+      "lessons": ["lesson-004", "lesson-005"],
+      "level": "beginner",
+      "estimatedTime": 40
+    }
+  ]
+}
