@@ -4,6 +4,8 @@ import FillInTheBlankExercise from '../components/exercises/FillInTheBlankExerci
 import DragDropExercise from '../components/exercises/DragDropExercise'
 import ListeningExercise from '../components/exercises/ListeningExercise'
 import TypingExercise from '../components/exercises/TypingExercise'
+import QuizExercise from '../components/exercises/QuizExercise'
+import FlashcardExercise from '../components/exercises/FlashcardExercise'
 import lessonsData from '../data/lessons.json'
 
 const LessonDetail = () => {
@@ -337,17 +339,19 @@ const LessonDetail = () => {
             )}
             
             {activeExercise.type === 'quiz' && (
-              <div style={{ padding: '2rem', textAlign: 'center' }}>
-                <h3>Quiz Exercise</h3>
-                <p>Quiz functionality will be implemented in a future update.</p>
-              </div>
+              <QuizExercise
+                exercise={activeExercise}
+                onComplete={handleExerciseComplete}
+                onProgress={handleExerciseProgress}
+              />
             )}
             
             {activeExercise.type === 'flashcard' && (
-              <div style={{ padding: '2rem', textAlign: 'center' }}>
-                <h3>Flashcard Exercise</h3>
-                <p>Flashcard functionality will be implemented in a future update.</p>
-              </div>
+              <FlashcardExercise
+                exercise={activeExercise}
+                onComplete={handleExerciseComplete}
+                onProgress={handleExerciseProgress}
+              />
             )}
             
             {activeExercise.type === 'pronunciation' && (
