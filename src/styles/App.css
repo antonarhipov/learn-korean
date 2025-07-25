@@ -883,6 +883,171 @@
   color: var(--text-secondary);
 }
 
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Touch-friendly sizing */
+@media (hover: none) and (pointer: coarse) {
+  /* Touch device optimizations */
+  button,
+  .btn,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px; /* Apple's recommended touch target size */
+    min-width: 44px;
+  }
+  
+  .korean-text {
+    font-size: 1.2em;
+    line-height: 1.8;
+    padding: 0.5rem;
+  }
+  
+  /* Larger touch targets for audio controls */
+  .pronunciation-btn,
+  .audio-btn {
+    min-width: 48px;
+    min-height: 48px;
+    font-size: 1.2rem;
+  }
+  
+  /* Enhanced focus for touch */
+  *:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+  }
+}
+
+/* Mobile styles (up to 768px) */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .main-header {
+    padding: 0.5rem 1rem;
+  }
+  
+  .page-container {
+    padding: 1rem;
+  }
+  
+  .page-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .page-title {
+    font-size: 1.5rem;
+  }
+  
+  /* Mobile navigation */
+  .mobile-nav-toggle {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    background: var(--primary-color);
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  /* Mobile-specific Korean text */
+  .korean-text {
+    font-size: 1.3em;
+    line-height: 1.8;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* Tablet styles (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .sidebar {
+    width: var(--sidebar-width);
+  }
+  
+  .main-content {
+    margin-left: var(--sidebar-width);
+  }
+  
+  .page-container {
+    padding: 1.5rem;
+  }
+  
+  /* Tablet Korean text */
+  .korean-text {
+    font-size: 1.25em;
+    line-height: 1.7;
+  }
+  
+  /* Tablet navigation */
+  .mobile-nav-toggle {
+    display: none;
+  }
+}
+
+/* Desktop styles (1025px and up) */
+@media screen and (min-width: 1025px) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+  
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+/* Touch-friendly audio controls */
+.audio-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (hover: none) {
+  .audio-controls button {
+    min-width: 56px;
+    min-height: 56px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .audio-controls .play-btn {
+    min-width: 64px;
+    min-height: 64px;
+    font-size: 2rem;
+  }
+}
+
 /* Error Logs Section */
 .error-logs-section {
   flex: 1;
