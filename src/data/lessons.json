@@ -38,8 +38,8 @@
           }
         ],
         "media": {
-          "image": "/assets/images/hangul-chart.jpg",
-          "video": null
+          "image": "/assets/images/lessons/lesson-001_chart_hangul-overview.svg",
+          "video": "/assets/videos/lessons/lesson-001_intro_welcome.mp4"
         }
       },
       "exercises": [
